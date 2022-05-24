@@ -3,11 +3,13 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { ReportIssueComponent } from './report-issue.component'; // My component
+import { WelcomeMessageComponent } from './Components/WelcomeMessageComponent/welcome-message.component'; // My component
+import { ReportIssueComponent } from './Components/ReportIssueComponent/report-issue.component'; // My component
 
 @NgModule({
   declarations: [
     AppComponent,
+    WelcomeMessageComponent, // My component
     ReportIssueComponent // My component
   ],
   imports: [
