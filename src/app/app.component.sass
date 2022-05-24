@@ -1,11 +1,16 @@
-@use "Abstracts/index"
+@use "Abstracts" as *
 
 // Welcome component
 .container__welcome
-    @include index.flex-container
+    @include flex-container
 .name
     display: block
-    color: index.$secondary-green
+    color: $secondary-green
 .welcome-img
     max-width: 300px
     display: block
+
+// Grid
+@media only screen and (min-width: 768px)
+    .grid
+        display: grid

@@ -1,5 +1,7 @@
-@use "../../Abstracts/index"
+@use "../../Abstracts" as *
 
+.container__report-issue
+    @include flex-container
 .report-issue-btn
-    background-color: index.$primary-lightgray
+    background-color: $primary-lightgray
     padding: 1rem
