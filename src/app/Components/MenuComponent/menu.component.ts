@@ -8,4 +8,5 @@ import { Component } from "@angular/core";
 
 export class MenuComponent {
     logoText = "odevo"
+    logOut = "Logout"
 }
