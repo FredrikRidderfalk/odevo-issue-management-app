@@ -7,5 +7,5 @@ import { Component } from "@angular/core";
 })
 
 export class WelcomeMessageComponent {
-    firstName = "Habibi"
+    firstName = "Habibijuuuuuuuuuu"
 }

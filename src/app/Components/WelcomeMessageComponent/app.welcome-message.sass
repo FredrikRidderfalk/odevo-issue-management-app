@@ -2,9 +2,21 @@
 
 .container__welcome
     @include flex-container
+    justify-content: space-between
+    background-color: $primary-lightgray
+    border-radius: rem(14)
     color: $primary-black
+    overflow: hidden
+.container__welcome-text
+    padding-left: rem(32)
+    padding-right: rem(10)
 .name
     display: block
+    white-space: nowrap
 .welcome-img
     max-width: 300px
     display: block
+
+@media only screen and (min-width: 768px)
+    .container__welcome
+        max-width: 600px
