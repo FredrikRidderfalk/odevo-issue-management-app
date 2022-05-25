@@ -9,6 +9,7 @@ import { NavigationComponent } from './Components/NavigationComponent/navigation
 import { MenuComponent } from './Components/MenuComponent/menu.component';
 import { TaskTrackingComponent } from './Components/TaskTrackingComponent/task-tracking.component';
 import { StatsComponent } from './Components/StatsComponent/stats.component';
+import { UpcomingTasksComponent } from './Components/UpcomingTasksComponent/upcoming-tasks.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { StatsComponent } from './Components/StatsComponent/stats.component';
     NavigationComponent,
     MenuComponent,
     TaskTrackingComponent,
-    StatsComponent
+    StatsComponent,
+    UpcomingTasksComponent
   ],
   imports: [
     BrowserModule,
