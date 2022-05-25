@@ -2,6 +2,13 @@
 
 .container__task-tracker
     @include flex-container
+    justify-content: space-between
 .task-type
     background-color: $primary-lightgray
-    padding: rem(20)
+    padding: rem(18) rem(24)
+    border-radius: rem(14)
+    min-width: 160px
+.task-type > p
+    font-size: rem(18)
+.task-type > h1
+    font-weight: 600
