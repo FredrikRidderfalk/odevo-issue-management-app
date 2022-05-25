@@ -2,10 +2,28 @@
 
 .container__navigation
     @include flex-container
+    justify-content: space-between
+.container__nav-buttons
+    @include flex-container
 .avatar
     width: 40px
     border-radius: 8px
 .material-symbols-outlined
-    font-size: rem(36)
+    font-size: rem(30)
 .searchbar
-    min-width: 300px
+    min-width: 350px
+    border: 1px solid $primary-black
+    border-radius: rem(8)
+    padding: rem(10)
+    padding-left: rem(40)
+    background-color: $primary-lightgray
+.searchbar:focus
+    outline-color: $secondary-green
+.container__searchbar
+    position: relative
+.container__searchbar > span
+    position: absolute
+    left: 6px
+    top: 6px
+.container__notification
+    margin-right: rem(30)
