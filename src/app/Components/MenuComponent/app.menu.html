@@ -1,30 +1,33 @@
 <div class="container__menu">
-  <div class="container__menu-links">
-    <div class="container__logo">
-      <img class="logo" src="/assets/odevo-logo.png" alt="Odevo logo" />
-      <h1 class="odevo">{{ logoText }}</h1>
-    </div>
+  <div class="container__logo">
+    <img class="logo" src="/assets/odevo-logo-white.png" alt="Odevo logo" />
+    <h1 class="odevo">{{ logoText }}</h1>
+  </div>
 
-    <div class="container__page-links">
-      <div class="container__notification">
-        <span class="material-symbols-outlined">notifications</span>
-      </div>
-      <div class="container__notification">
-        <span class="material-symbols-outlined">notifications</span>
-      </div>
-      <div class="container__notification">
-        <span class="material-symbols-outlined">notifications</span>
-      </div>
-      <div class="container__notification">
-        <span class="material-symbols-outlined">notifications</span>
-      </div>
-      <div class="container__notification">
-        <span class="material-symbols-outlined">notifications</span>
-      </div>
+  <div class="container__page-links">
+    <div class="link">
+      <span class="material-symbols-outlined">dashboard</span>
+      <p>{{ dashboard }}</p>
+    </div>
+    <div class="link">
+      <span class="material-symbols-outlined">group</span>
+      <p>{{ team }}</p>
+    </div>
+    <div class="link">
+      <span class="material-symbols-outlined">task</span>
+      <p>{{ tasks }}</p>
+    </div>
+    <div class="link">
+      <span class="material-symbols-outlined">monitoring</span>
+      <p>{{ statistics }}</p>
+    </div>
+    <div class="link">
+      <span class="material-symbols-outlined">settings</span>
+      <p>{{ settings }}</p>
     </div>
   </div>
 
-  <div class="container__logout">
+  <div class="link logout-link">
     <span class="material-symbols-outlined">logout</span>
     <p>{{ logOut }}</p>
   </div>
