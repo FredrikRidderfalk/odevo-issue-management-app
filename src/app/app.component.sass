@@ -12,5 +12,29 @@
 
 // Grid
 @media only screen and (min-width: 768px)
-    .grid
+    #welcome-message-component
+        grid-area: welcome
+        border: 1px solid magenta
+    #task-tracking-component
+        grid-area: tasks
+        border: 1px solid magenta
+    #menu-component
+        grid-area: menu
+        border: 1px solid magenta
+    #navigation-component
+        grid-area: nav
+        border: 1px solid magenta
+    #report-issue-component
+        grid-area: report
+        border: 1px solid magenta
+    #stats-component
+        grid-area: stats
+        border: 1px solid magenta
+    #upcoming-tasks-component
+        grid-area: upcoming
+        border: 1px solid magenta
+    .grid-container
         display: grid
+        grid-template-areas: "menu welcome nav" "menu welcome report" "menu welcome report" "menu tasks upcoming" "menu stats upcoming"
+        grid-gap: 10px
+        grid-template-columns: 1fr 2fr 2fr
