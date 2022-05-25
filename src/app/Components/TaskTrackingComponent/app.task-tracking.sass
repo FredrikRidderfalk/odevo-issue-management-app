@@ -1,14 +1,22 @@
 @use "../../Abstracts" as *
 
-.container__task-tracker
-    @include flex-container
-    justify-content: space-between
 .task-type
     background-color: $primary-lightgray
     padding: rem(18) rem(24)
     border-radius: rem(14)
-    min-width: 160px
-.task-type > p
-    font-size: rem(18)
 .task-type > h1
     font-weight: 600
+
+// Grid
+@media only screen and (min-width: 768px)
+    .new-tasks
+        grid-area: left
+    .active-tasks
+        grid-area: middle
+    .resolved-tasks
+        grid-area: right
+    .container__task-tracker
+        display: grid
+        grid-template-areas: "left middle right"
+        grid-gap: rem(10)
+        grid-template-columns: 1fr 1fr 1fr
