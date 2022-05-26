@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskTrackingComponent implements OnInit {
   newTasks = "3"
-  activeTasks = "1"
+  activeTasks = "0"
   resolvedTasks = "5"
 
   constructor() { }

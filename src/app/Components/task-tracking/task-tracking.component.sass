@@ -1,11 +1,15 @@
 @use "../../abstracts" as *
 
+a
+    text-decoration: none
+    color: $primary-black
 .task-type
     background-color: $primary-lightgray
     padding: rem(18) rem(24)
     border-radius: rem(14)
     transition: transform 0.2s ease-out
     cursor: pointer
+    white-space: nowrap
 .task-type:hover
     transform: scale(104%)
 .task-type > h1
