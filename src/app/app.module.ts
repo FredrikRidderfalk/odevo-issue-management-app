@@ -10,7 +10,8 @@ import { MenuComponent } from './components/MenuComponent/menu.component';
 import { TaskTrackingComponent } from './components/TaskTrackingComponent/task-tracking.component';
 import { StatsComponent } from './components/StatsComponent/stats.component';
 import { UpcomingTasksComponent } from './components/UpcomingTasksComponent/upcoming-tasks.component';
-import { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './pages/home/home.component';
+import { TasksComponent } from './pages/tasks/tasks.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './components/home/home.component';
     TaskTrackingComponent,
     StatsComponent,
     UpcomingTasksComponent,
-    HomeComponent
+    HomeComponent,
+    TasksComponent
   ],
   imports: [
     BrowserModule,
