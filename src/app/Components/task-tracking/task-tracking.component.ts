@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-task-tracking',
@@ -10,9 +11,21 @@ export class TaskTrackingComponent implements OnInit {
   activeTasks = "0"
   resolvedTasks = "5"
 
-  constructor() { }
+  constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
+  }
+
+  showNewTasks() {
+    this.router.navigate(["new-tasks"], {relativeTo: this.route})
+  }
+
+  showActiveTasks() {
+    this.router.navigate(["active-tasks"], {relativeTo: this.route})
+  }
+
+  showResolvedTasks() {
+    this.router.navigate(["resolved-tasks"], {relativeTo: this.route})
   }
 
 }

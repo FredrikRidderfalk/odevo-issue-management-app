@@ -11,7 +11,7 @@
       <p>Active Tasks</p>
     </div>
   </a>
-  <a routerLink="/tasks/resolved-tasks">
+  <a (click)="showResolvedTasks()">
     <div class="task-type resolved-tasks">
       <h1>{{ resolvedTasks }}</h1>
       <p>Resolved Tasks</p>
