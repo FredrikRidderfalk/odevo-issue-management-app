@@ -15,6 +15,7 @@ import { TasksComponent } from './pages/tasks/tasks.component';
 import { NewTasksComponent } from './components/new-tasks/new-tasks.component';
 import { ActiveTasksComponent } from './components/active-tasks/active-tasks.component';
 import { ResolvedTasksComponent } from './components/resolved-tasks/resolved-tasks.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { ResolvedTasksComponent } from './components/resolved-tasks/resolved-tas
     TasksComponent,
     NewTasksComponent,
     ActiveTasksComponent,
-    ResolvedTasksComponent
+    ResolvedTasksComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,

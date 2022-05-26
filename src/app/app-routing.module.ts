@@ -5,6 +5,7 @@ import { ActiveTasksComponent } from './components/active-tasks/active-tasks.com
 import { ResolvedTasksComponent } from './components/resolved-tasks/resolved-tasks.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent },
@@ -13,6 +14,7 @@ const routes: Routes = [
     { path: "active-tasks", component: ActiveTasksComponent },
     { path: "resolved-tasks", component: ResolvedTasksComponent },
   ] },
+  { path: "**", component: ErrorComponent },
 ];
 
 @NgModule({
