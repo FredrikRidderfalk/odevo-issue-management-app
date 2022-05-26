@@ -7,7 +7,7 @@ import { WelcomeMessageComponent } from './components/welcome-message/welcome-me
 import { ReportIssueComponent } from './components/report-issue/report-issue.component';
 import { NavigationComponent } from './components/navigation/navigation.component';
 import { MenuComponent } from './components/menu/menu.component';
-import { TaskTrackingComponent } from './components/TaskTrackingComponent/task-tracking.component';
+import { TaskTrackingComponent } from './components/task-tracking/task-tracking.component';
 import { StatsComponent } from './components/stats/stats.component';
 import { UpcomingTasksComponent } from './components/upcoming-tasks/upcoming-tasks.component';
 import { HomeComponent } from './pages/home/home.component';

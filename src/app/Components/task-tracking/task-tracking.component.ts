@@ -6,6 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./task-tracking.component.sass']
 })
 export class TaskTrackingComponent implements OnInit {
+  newTasks = "3"
+  activeTasks = "1"
+  resolvedTasks = "5"
 
   constructor() { }
 
