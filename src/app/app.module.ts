@@ -3,13 +3,14 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WelcomeMessageComponent } from './Components/WelcomeMessageComponent/welcome-message.component';
-import { ReportIssueComponent } from './Components/ReportIssueComponent/report-issue.component';
-import { NavigationComponent } from './Components/NavigationComponent/navigation.component';
-import { MenuComponent } from './Components/MenuComponent/menu.component';
-import { TaskTrackingComponent } from './Components/TaskTrackingComponent/task-tracking.component';
-import { StatsComponent } from './Components/StatsComponent/stats.component';
-import { UpcomingTasksComponent } from './Components/UpcomingTasksComponent/upcoming-tasks.component';
+import { WelcomeMessageComponent } from './components/WelcomeMessageComponent/welcome-message.component';
+import { ReportIssueComponent } from './components/ReportIssueComponent/report-issue.component';
+import { NavigationComponent } from './components/NavigationComponent/navigation.component';
+import { MenuComponent } from './components/MenuComponent/menu.component';
+import { TaskTrackingComponent } from './components/TaskTrackingComponent/task-tracking.component';
+import { StatsComponent } from './components/StatsComponent/stats.component';
+import { UpcomingTasksComponent } from './components/UpcomingTasksComponent/upcoming-tasks.component';
+import { HomeComponent } from './components/home/home.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { UpcomingTasksComponent } from './Components/UpcomingTasksComponent/upco
     TaskTrackingComponent,
     StatsComponent,
     UpcomingTasksComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,
