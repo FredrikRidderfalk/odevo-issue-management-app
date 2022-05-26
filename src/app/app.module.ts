@@ -20,7 +20,7 @@ import { UpcomingTasksComponent } from './Components/UpcomingTasksComponent/upco
     MenuComponent,
     TaskTrackingComponent,
     StatsComponent,
-    UpcomingTasksComponent
+    UpcomingTasksComponent,
   ],
   imports: [
     BrowserModule,

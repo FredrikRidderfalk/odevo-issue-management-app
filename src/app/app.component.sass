@@ -1,14 +1,7 @@
 @use "Abstracts" as *
 
-// Welcome component
-.container__welcome
-    @include flex-container
-.name
-    display: block
-    color: $secondary-green
-.welcome-img
-    max-width: 300px
-    display: block
+.grid-container
+    padding: rem(10)
 
 // Grid
 @media only screen and (min-width: 768px)
@@ -29,7 +22,6 @@
     .grid-container
         display: grid
         height: 100vh
-        padding: rem(10)
         grid-template-areas: "menu welcome nav" "menu welcome report" "menu tasks upcoming" "menu stats upcoming"
         grid-gap: rem(10)
         grid-template-columns: 1fr 2fr 2fr
