@@ -12,6 +12,9 @@ import { StatsComponent } from './components/stats/stats.component';
 import { UpcomingTasksComponent } from './components/upcoming-tasks/upcoming-tasks.component';
 import { HomeComponent } from './pages/home/home.component';
 import { TasksComponent } from './pages/tasks/tasks.component';
+import { NewTasksComponent } from './components/new-tasks/new-tasks.component';
+import { ActiveTasksComponent } from './components/active-tasks/active-tasks.component';
+import { ResolvedTasksComponent } from './components/resolved-tasks/resolved-tasks.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +27,10 @@ import { TasksComponent } from './pages/tasks/tasks.component';
     StatsComponent,
     UpcomingTasksComponent,
     HomeComponent,
-    TasksComponent
+    TasksComponent,
+    NewTasksComponent,
+    ActiveTasksComponent,
+    ResolvedTasksComponent
   ],
   imports: [
     BrowserModule,
