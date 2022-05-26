@@ -1,0 +1,38 @@
+@use "../../abstracts" as *
+
+.container__report-issue
+    @include flex-container
+    justify-content: space-between
+    padding-inline: rem(32)
+    border-radius: 12px
+    background-image: url("/assets/new-task-bg.jpg")
+    background-color: $primary-black
+    background-blend-mode: screen
+    background-position: center
+    background-size: cover
+    height: 100%
+    color: $primary-white
+    position: relative
+.container__report-issue:before
+    @include box-shadow-element
+    border-radius: 12px
+.container__report-issue:hover:before
+    @include box-shadow
+.title
+    font-weight: 500
+    letter-spacing: 1.2px
+.subtitle
+    margin-top: rem(8)
+.report-issue-btn
+    background-color: $primary-white
+    padding: rem(10)
+    border: none
+    border-radius: 12px
+    transition: transform 0.2s ease-in
+.report-issue-btn:hover
+    background-color: $primary-beige-hover
+    transform: scale(110%)
+    cursor: pointer
+.material-symbols-outlined
+    font-size: rem(36)
+    display: block

@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./report-issue.component.sass']
 })
 export class ReportIssueComponent implements OnInit {
+  title = "Issue Reporting"
+  subtitle = "Create a ticket for an issue"
 
   constructor() { }
 
