@@ -1,32 +1,29 @@
 <div class="container__new-task">
   <div class="new-task__text">
     <div class="new-task__info">
-      <h3 class="name">Brf Olskroken</h3>
+      <h3 class="name">{{ name }}</h3>
       <p class="info">
-        “The laundry room for stairwell 2B has been experiencing a leak since
-        yesterday coming fr...”
+        {{ info }}
       </p>
     </div>
     <div class="extra-info">
       <div class="contact">
-        <p>Contact: Alex Skarsgård</p>
+        <p>{{ contact }}</p>
       </div>
       <div class="date-added">
-        <p>Added: 2022-07-11</p>
+        <p>{{ date }}</p>
       </div>
     </div>
   </div>
 
   <div class="new-task__icons">
     <div class="calendar">
-      <span class="material-symbols-outlined">calendar_today</span>
+      <span id="calendar-icon" class="material-symbols-outlined">{{
+        calendarIcon
+      }}</span>
     </div>
     <div class="task-type">
-      <img
-        class="task-type__img"
-        src="/assets/water-tag2.png"
-        alt="Water tag"
-      />
+      <img class="task-type__img" src="{{ tagSource }}" alt="Tag" />
     </div>
   </div>
 </div>
