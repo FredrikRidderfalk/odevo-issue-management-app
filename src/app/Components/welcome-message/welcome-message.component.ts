@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./welcome-message.component.sass']
 })
 export class WelcomeMessageComponent implements OnInit {
+  firstName = "Habibi"
 
   constructor() { }
 
