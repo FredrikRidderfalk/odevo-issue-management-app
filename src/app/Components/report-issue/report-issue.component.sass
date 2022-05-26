@@ -3,7 +3,7 @@
 .container__report-issue
     @include flex-container
     justify-content: space-between
-    padding-inline: rem(32)
+    padding-inline: rem(40)
     border-radius: 12px
     background-image: url("/assets/new-task-bg.jpg")
     background-color: $primary-black
@@ -36,3 +36,31 @@
 .material-symbols-outlined
     font-size: rem(36)
     display: block
+
+// Form
+.container__form
+    margin-block: rem(10)
+.form-input
+    width: 100%
+    border: 1px solid $primary-black
+    border-radius: rem(8)
+    margin-top: rem(10)
+    padding: rem(10)
+    padding-left: rem(40)
+    background-color: $primary-lightgray
+.form-input:focus
+    outline-color: $secondary-green
+.submit-btn
+    display: block
+    background-color: $primary-darkgray
+    color: $primary-white
+    font-size: rem(16)
+    width: 80%
+    margin: rem(10) auto
+    padding: rem(10)
+    border: none
+    border-radius: 12px
+    transition: transform 0.2s ease-out
+    cursor: pointer
+.submit-btn:hover
+    transform: scale(102%)

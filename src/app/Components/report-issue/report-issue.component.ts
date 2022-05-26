@@ -8,6 +8,8 @@ import { Component, OnInit } from '@angular/core';
 export class ReportIssueComponent implements OnInit {
   title = "Issue Reporting"
   subtitle = "Create a ticket for an issue"
+  prompt = "Fill in the details below"
+  report = "Report Issue"
 
   constructor() { }
 

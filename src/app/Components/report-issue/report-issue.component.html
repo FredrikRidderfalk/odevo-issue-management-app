@@ -11,11 +11,16 @@
 </div>
 <div class="container__form">
   <div>
-    <h3 class="title">{{ title }}</h3>
+    <h3 class="title">{{ prompt }}</h3>
   </div>
-  <div class="container__welcome-img">
-    <input class="brf" type="text" />
-    <input class="description" type="text" />
-    <input class="contact" type="text" />
+  <div class="container__input">
+    <input class="form-input brf" type="text" placeholder="Brf" />
+    <input
+      class="form-input description"
+      type="text"
+      placeholder="Description of the issue"
+    />
+    <input class="form-input contact" type="text" placeholder="Full name" />
+    <button class="submit-btn">{{ report }}</button>
   </div>
 </div>
