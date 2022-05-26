@@ -41,13 +41,19 @@ a > .link
     cursor: pointer
     transition: transform 0.2s ease-out
 .link:hover
-    opacity: 1
     background-color: $primary-darkgray
     transform: scale(104%)
+a:hover
+    opacity: 1
 a:first-of-type > .link
     margin-top: rem(60)
 .logout-link
     margin-inline: auto
     width: 90%
-.link__tasks, .link__dashboard
+
+// routerLinkActive
+.active
     opacity: 1
+    transform: scale(104%)
+    .link
+        background-color: $primary-darkgray

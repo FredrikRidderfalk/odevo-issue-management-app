@@ -8,7 +8,7 @@ import { TasksComponent } from './pages/tasks/tasks.component';
 import { ErrorComponent } from './pages/error/error.component';
 
 const routes: Routes = [
-  { path: "", component: HomeComponent },
+  { path: "home", component: HomeComponent },
   { path: "tasks", component: TasksComponent, children: [
     { path: "new-tasks", component: NewTasksComponent },
     { path: "active-tasks", component: ActiveTasksComponent },

@@ -5,7 +5,7 @@
   </div>
 
   <div class="container__page-links">
-    <a routerLink="/" class="link__dashboard"
+    <a routerLinkActive="active" routerLink="/home" class="link__dashboard"
       ><div class="link">
         <span class="material-symbols-outlined">dashboard</span>
         <p>{{ dashboard }}</p>
@@ -17,7 +17,7 @@
         <p>{{ team }}</p>
       </div></a
     >
-    <a routerLink="/tasks" class="link__tasks"
+    <a routerLinkActive="active" routerLink="/tasks" class="link__tasks"
       ><div class="link">
         <span class="material-symbols-outlined">task</span>
         <p>{{ tasks }}</p>
