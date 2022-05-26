@@ -5,28 +5,36 @@
   </div>
 
   <div class="container__page-links">
-    <div class="link">
-      <span class="material-symbols-outlined">dashboard</span>
-      <p>{{ dashboard }}</p>
-    </div>
-    <div class="link">
-      <span class="material-symbols-outlined">group</span>
-      <p>{{ team }}</p>
-    </div>
-    <div class="link">
-      <span class="material-symbols-outlined">task</span>
-      <a routerLink="/tasks"
-        ><p>{{ tasks }}</p></a
-      >
-    </div>
-    <div class="link">
-      <span class="material-symbols-outlined">monitoring</span>
-      <p>{{ statistics }}</p>
-    </div>
-    <div class="link">
-      <span class="material-symbols-outlined">settings</span>
-      <p>{{ settings }}</p>
-    </div>
+    <a routerLink="/" class="link__dashboard"
+      ><div class="link">
+        <span class="material-symbols-outlined">dashboard</span>
+        <p>{{ dashboard }}</p>
+      </div></a
+    >
+    <a routerLink=""
+      ><div class="link">
+        <span class="material-symbols-outlined">group</span>
+        <p>{{ team }}</p>
+      </div></a
+    >
+    <a routerLink="/tasks" class="link__tasks"
+      ><div class="link">
+        <span class="material-symbols-outlined">task</span>
+        <p>{{ tasks }}</p>
+      </div></a
+    >
+    <a routerLink=""
+      ><div class="link">
+        <span class="material-symbols-outlined">monitoring</span>
+        <p>{{ statistics }}</p>
+      </div></a
+    >
+    <a routerLink=""
+      ><div class="link">
+        <span class="material-symbols-outlined">settings</span>
+        <p>{{ settings }}</p>
+      </div></a
+    >
   </div>
 
   <div class="link logout-link">

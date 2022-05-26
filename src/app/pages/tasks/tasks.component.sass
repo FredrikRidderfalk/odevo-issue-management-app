@@ -1,0 +1,28 @@
+@use "../../abstracts" as *
+
+.grid-container
+    padding: rem(10)
+
+// Grid
+@media only screen and (min-width: 768px)
+    #welcome-message
+        grid-area: welcome
+    #task-tracking
+        grid-area: tasks
+    #menu
+        grid-area: menu
+    #navigation
+        grid-area: nav
+    #report-issue
+        grid-area: report
+    #stats
+        grid-area: stats
+    #upcoming-tasks
+        grid-area: upcoming
+    .grid-container
+        display: grid
+        height: 100vh
+        grid-template-areas: "menu welcome nav" "menu welcome report" "menu tasks upcoming" "menu stats upcoming"
+        grid-gap: rem(10)
+        grid-template-columns: 1fr 2fr 2fr
+        grid-template-rows: 1fr 2fr 2fr 10fr
