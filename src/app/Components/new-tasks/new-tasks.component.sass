@@ -17,11 +17,11 @@
 .new-task-text
     padding-left: rem(32)
     padding-right: rem(10)
-.name
+.brf
     display: block
     white-space: nowrap
     font-weight: 600
-.info
+.description
     margin-top: rem(10)
 .task-type__img
     width: 40px
@@ -41,19 +41,16 @@
 .material-symbols-outlined
     display: block
     font-size: rem(36)
-
-@media only screen and (min-width: 768px)
-    .container__new-task
-        max-width: 600px
-
-// SASS from report-issue.component.sass
-.material-symbols-outlined
-    font-size: rem(36)
-    display: block
     cursor: default
     max-width: fit-content
 
 // Newly created tasks
+.task-head
+    @include flex-container
+    min-width: rem(400)
+    justify-content: space-between
+    .resolve-btn
+        margin-left: rem(60)
 .task
     background-color: $tertiary-green
     cursor: pointer
@@ -64,4 +61,20 @@
     background-color: $primary-lightgray
     cursor: auto
 .resolve-btn
+    display: block
+    background-color: $primary-darkgray
+    color: $primary-white
+    font-size: rem(14)
+    width: 80%
+    margin: rem(10) auto
+    padding: rem(6)
+    border: none
+    border-radius: 12px
+    transition: transform 0.2s ease-out
     cursor: pointer
+.resolve-btn:hover
+    transform: scale(102%)
+
+@media only screen and (min-width: 768px)
+    .container__new-task
+        max-width: 600px
