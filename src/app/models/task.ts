@@ -1,5 +1,7 @@
 export class task {
-    content!: string;
+    brf!: string;
+    description!: string;
+    contact!: string;
     read!: boolean;
     addedToCalendar!: boolean;
 }

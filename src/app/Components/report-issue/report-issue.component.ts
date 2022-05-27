@@ -15,17 +15,25 @@ export class ReportIssueComponent implements OnInit {
 
   tasks!: task[]
 
+  inputBrf: string = ""
+  inputDescription: string = ""
+  inputContact: string = ""
+
   constructor() { }
 
   ngOnInit(): void {
     this.tasks = [
       {
-        content: "First task",
+        brf: "Brf Olskroken",
+        description: "Something about a leak.",
+        contact: "Alex Skarsgård",
         read: false,
         addedToCalendar: false,
       },
       {
-        content: "Second task",
+        brf: "Brf Guldheden",
+        description: "A light has gone out.",
+        contact: "Anna Annedal",
         read: true,
         addedToCalendar: true,
       },
@@ -50,6 +58,22 @@ export class ReportIssueComponent implements OnInit {
 
   markTaskAsResolved(id: number) {
     this.tasks = this.tasks.filter((value, i) => i !== id)
+  }
+
+  reportIssue() {
+    // Add issue to tasks array
+    this.tasks.push({
+      brf: this.inputBrf,
+      description: this.inputDescription,
+      contact: this.inputContact,
+      read: false,
+      addedToCalendar: false
+    })
+
+    // Clear input fields on submit
+    this.inputBrf = ""
+    this.inputDescription = ""
+    this.inputContact = ""
   }
 
 }

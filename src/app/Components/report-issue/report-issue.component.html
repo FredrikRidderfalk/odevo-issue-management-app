@@ -10,21 +10,36 @@
   </div>
 </div>
 
-<div class="container__form">
+<!-- Issue Reporting Form -->
+<form class="container__form" (submit)="reportIssue()">
   <div>
     <h3 class="title">{{ prompt }}</h3>
   </div>
   <div class="container__input">
-    <input class="form-input brf" type="text" placeholder="Brf" />
     <input
-      class="form-input description"
+      class="form-input"
       type="text"
-      placeholder="Description of the issue"
+      name="inputBrf"
+      placeholder="Brf"
+      [(ngModel)]="inputBrf"
     />
-    <input class="form-input contact" type="text" placeholder="Full name" />
-    <button class="submit-btn">{{ report }}</button>
+    <input
+      class="form-input"
+      type="text"
+      name="inputDescription"
+      placeholder="Description of the issue"
+      [(ngModel)]="inputDescription"
+    />
+    <input
+      class="form-input"
+      type="text"
+      name="inputContact"
+      placeholder="Full name"
+      [(ngModel)]="inputContact"
+    />
+    <input type="submit" value="{{ report }}" class="submit-btn" />
   </div>
-</div>
+</form>
 
 <!-- Added tasks -->
 <div class="container__temp-tasks">
@@ -44,11 +59,17 @@
         >{{ calendarIcon }}</span
       >
     </div>
-    <div class="id">Issue: #{{ i }}</div>
-    <div class="content">
-      {{ task.content }}
+    <div class="id">Issue: #{{ i + 1 }}</div>
+    <div class="brf">
+      {{ task.brf }}
     </div>
-    <button class="delete" (click)="markTaskAsResolved(i)">
+    <div class="description">
+      {{ task.description }}
+    </div>
+    <div class="contact">
+      {{ task.contact }}
+    </div>
+    <button class="resolve-btn" (click)="markTaskAsResolved(i)">
       Mark as resolved
     </button>
   </div>
