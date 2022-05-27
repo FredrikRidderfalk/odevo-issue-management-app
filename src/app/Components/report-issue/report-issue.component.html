@@ -56,7 +56,7 @@
         id="calendar-icon"
         class="material-symbols-outlined"
         (click)="addToCalendar(i)"
-        >{{ calendarIcon }}</span
+        >{{ task.addedToCalendar ? "event_available" : "calendar_today" }}</span
       >
     </div>
     <div class="id">Issue: #{{ i + 1 }}</div>
