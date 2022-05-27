@@ -9,6 +9,7 @@
     </button>
   </div>
 </div>
+
 <div class="container__form">
   <div>
     <h3 class="title">{{ prompt }}</h3>
@@ -22,5 +23,16 @@
     />
     <input class="form-input contact" type="text" placeholder="Full name" />
     <button class="submit-btn">{{ report }}</button>
+  </div>
+</div>
+
+<div class="container__temp-tasks">
+  <div
+    class="task {{ task.completed ? 'done' : '' }}"
+    *ngFor="let task of tasks; let id = index"
+  >
+    <div class="id">Issue: #{{ id + 1 }}</div>
+    <div class="content">{{ task.content }}</div>
+    <button class="delete">Mark as resolved</button>
   </div>
 </div>

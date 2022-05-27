@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { task } from 'src/app/models/task';
 
 @Component({
   selector: 'app-report-issue',
@@ -11,9 +12,21 @@ export class ReportIssueComponent implements OnInit {
   prompt = "Fill in the details below"
   report = "Report Issue"
 
+  tasks: task[] = []
+
   constructor() { }
 
   ngOnInit(): void {
+    this.tasks = [
+      {
+        content: "First task",
+        completed: false,
+      },
+      {
+        content: "Second task",
+        completed: true,
+      },
+    ]
   }
 
 }
