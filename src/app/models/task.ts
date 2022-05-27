@@ -1,6 +1,7 @@
 export class task {
     content!: string;
-    completed!: boolean;
+    read!: boolean;
+    addedToCalendar!: boolean;
 }
 // export class task {
 //     content: string = "";

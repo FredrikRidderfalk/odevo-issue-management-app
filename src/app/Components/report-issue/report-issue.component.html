@@ -26,13 +26,30 @@
   </div>
 </div>
 
+<!-- Added tasks -->
 <div class="container__temp-tasks">
   <div
-    class="task {{ task.completed ? 'done' : '' }}"
-    *ngFor="let task of tasks; let id = index"
+    class="task {{ task.addedToCalendar ? 'added-to-calendar' : '' }} {{
+      task.read ? 'read' : ''
+    }}"
+    *ngFor="let task of tasks; let i = index"
+    style="border: 1px solid black"
+    (click)="markTaskAsRead(i)"
   >
-    <div class="id">Issue: #{{ id + 1 }}</div>
-    <div class="content">{{ task.content }}</div>
-    <button class="delete">Mark as resolved</button>
+    <div class="calendar">
+      <span
+        id="calendar-icon"
+        class="material-symbols-outlined"
+        (click)="addToCalendar(i)"
+        >{{ calendarIcon }}</span
+      >
+    </div>
+    <div class="id">Issue: #{{ i }}</div>
+    <div class="content">
+      {{ task.content }}
+    </div>
+    <button class="delete" (click)="markTaskAsResolved(i)">
+      Mark as resolved
+    </button>
   </div>
 </div>

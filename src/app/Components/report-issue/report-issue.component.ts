@@ -11,8 +11,9 @@ export class ReportIssueComponent implements OnInit {
   subtitle = "Create a ticket for an issue"
   prompt = "Fill in the details below"
   report = "Report Issue"
+  calendarIcon = "calendar_today"
 
-  tasks: task[] = []
+  tasks!: task[]
 
   constructor() { }
 
@@ -20,13 +21,35 @@ export class ReportIssueComponent implements OnInit {
     this.tasks = [
       {
         content: "First task",
-        completed: false,
+        read: false,
+        addedToCalendar: false,
       },
       {
         content: "Second task",
-        completed: true,
+        read: true,
+        addedToCalendar: true,
       },
     ]
+  }
+
+  markTaskAsRead(id: number) {
+    this.tasks.map((value, i) => {
+      if(i === id) value.read = true
+
+      return value
+    })
+  }
+
+  addToCalendar(id: number) {
+    this.tasks.map((value, i) => {
+      if(i === id) value.addedToCalendar = true
+
+      return value
+    })
+  }
+
+  markTaskAsResolved(id: number) {
+    this.tasks = this.tasks.filter((value, i) => i !== id)
   }
 
 }
