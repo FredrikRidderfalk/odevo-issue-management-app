@@ -6,6 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./active-tasks.component.sass']
 })
 export class ActiveTasksComponent implements OnInit {
+  message = "Wow, such empty..."
 
   constructor() { }
 
