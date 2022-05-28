@@ -2,7 +2,7 @@
   class="container__new-task task {{
     task.addedToCalendar ? 'added-to-calendar' : ''
   }} {{ task.read ? 'read' : '' }}"
-  *ngFor="let task of tasks; let i = index"
+  *ngFor="let task of store.tasks; let i = index"
   (click)="markTaskAsRead(i)"
 >
   <div class="new-task__text">
@@ -40,4 +40,10 @@
       <img class="task-type__img" src="{{ tagSource }}" alt="Tag" />
     </div>
   </div>
+</div>
+
+<div *ngFor="let c of store.tasks">
+  <div>{{ c.brf }}</div>
+  <div>{{ c.description }}</div>
+  <div>{{ c.contact }}</div>
 </div>

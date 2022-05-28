@@ -1,5 +1,6 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/models/task';
+import { taskStore } from '../../task-store';
 
 @Component({
   selector: 'app-new-tasks',
@@ -7,6 +8,7 @@ import { Task } from 'src/app/models/task';
   styleUrls: ['./new-tasks.component.sass']
 })
 export class NewTasksComponent implements OnInit {
+  store = taskStore;
   date = "2022-07-11"
   tagSource = "/assets/water-tag2.png"
   calendarIcon = "calendar_today"

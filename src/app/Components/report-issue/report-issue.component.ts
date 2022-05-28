@@ -1,5 +1,6 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Task } from 'src/app/models/task';
+import { taskStore } from '../../task-store';
 
 @Component({
   selector: 'app-report-issue',
@@ -7,20 +8,20 @@ import { Task } from 'src/app/models/task';
   styleUrls: ['./report-issue.component.sass']
 })
 export class ReportIssueComponent implements OnInit {
+  store = taskStore;
   title = "Issue Reporting"
   subtitle = "Create a ticket for an issue"
   prompt = "Fill in the details below"
   report = "Report Issue"
   tagSource = "/assets/water-tag2.png"
   calendarIcon = "calendar_today"
+  currentDate = new Date()
 
   tasks!: Task[]
 
   inputBrf: string = ""
   inputDescription: string = ""
   inputContact: string = ""
-
-  currentDate = new Date()
 
   constructor() { }
 
@@ -65,7 +66,16 @@ export class ReportIssueComponent implements OnInit {
 
   reportIssue() {
     // Add issue to tasks array
-    this.tasks.push({
+    // this.tasks.push({
+    //   brf: this.inputBrf,
+    //   description: this.inputDescription,
+    //   contact: this.inputContact,
+    //   read: false,
+    //   addedToCalendar: false
+    // })
+
+    // Add issue to the store tasks array
+    this.store.setTask({
       brf: this.inputBrf,
       description: this.inputDescription,
       contact: this.inputContact,
