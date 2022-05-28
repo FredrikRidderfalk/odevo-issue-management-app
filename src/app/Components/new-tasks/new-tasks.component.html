@@ -22,7 +22,7 @@
         <p>Contact: {{ task.contact }}</p>
       </div>
       <div class="date-added">
-        <p>Added: {{ date }}</p>
+        <p>{{ currentDate | date: "fullDate" }}</p>
       </div>
     </div>
   </div>

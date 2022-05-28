@@ -78,3 +78,84 @@
     cursor: auto
 .resolve-btn
     cursor: pointer
+
+// Added from new-tasks
+.container__new-task
+    @include flex-container
+    justify-content: space-between
+    background-color: $primary-lightgray
+    padding: rem(18) rem(24)
+    border-radius: rem(14)
+    transition: transform 0.2s ease-out
+    cursor: pointer
+    color: $primary-black
+    overflow: hidden
+    height: 100%
+    max-height: 160px
+    margin-bottom: rem(10)
+.container__new-task:hover
+    transform: scale(102%)
+.new-task-text
+    padding-left: rem(32)
+    padding-right: rem(10)
+.brf
+    display: block
+    white-space: nowrap
+    font-weight: 600
+.description
+    margin-top: rem(10)
+.task-type__img
+    width: 40px
+    display: block
+.extra-info
+    @include flex-container
+    justify-content: space-between
+    margin-top: rem(10)
+    font-weight: 500
+.new-task__icons
+    @include flex-container
+    flex-direction: column
+    justify-content: space-between
+    align-content: space-between
+    height: 100%
+    padding-left: rem(20)
+.material-symbols-outlined
+    display: block
+    font-size: rem(36)
+    cursor: default
+    max-width: fit-content
+
+// Newly created tasks
+.task-head
+    @include flex-container
+    min-width: rem(400)
+    justify-content: space-between
+    .resolve-btn
+        margin-left: rem(60)
+.task
+    background-color: $tertiary-green
+    cursor: pointer
+.added-to-calendar
+    .material-symbols-outlined
+        color: $secondary-green
+.read
+    background-color: $primary-lightgray
+    cursor: auto
+.resolve-btn
+    display: block
+    background-color: $primary-darkgray
+    color: $primary-white
+    font-size: rem(14)
+    width: 180px
+    margin: rem(10) auto
+    padding: rem(6)
+    border: none
+    border-radius: 12px
+    transition: transform 0.2s ease-out
+    cursor: pointer
+.resolve-btn:hover
+    transform: scale(102%)
+
+@media only screen and (min-width: 768px)
+    .container__new-task
+        max-width: 600px

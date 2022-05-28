@@ -11,6 +11,7 @@ export class ReportIssueComponent implements OnInit {
   subtitle = "Create a ticket for an issue"
   prompt = "Fill in the details below"
   report = "Report Issue"
+  tagSource = "/assets/water-tag2.png"
   calendarIcon = "calendar_today"
 
   tasks!: task[]
@@ -18,6 +19,8 @@ export class ReportIssueComponent implements OnInit {
   inputBrf: string = ""
   inputDescription: string = ""
   inputContact: string = ""
+
+  currentDate = new Date()
 
   constructor() { }
 
