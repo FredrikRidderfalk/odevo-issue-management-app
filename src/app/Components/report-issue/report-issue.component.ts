@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { task } from 'src/app/models/task';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { Task } from 'src/app/models/task';
 
 @Component({
   selector: 'app-report-issue',
@@ -14,7 +14,7 @@ export class ReportIssueComponent implements OnInit {
   tagSource = "/assets/water-tag2.png"
   calendarIcon = "calendar_today"
 
-  tasks!: task[]
+  tasks!: Task[]
 
   inputBrf: string = ""
   inputDescription: string = ""

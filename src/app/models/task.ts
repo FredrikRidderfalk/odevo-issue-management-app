@@ -1,9 +1,9 @@
-export class task {
-    brf!: string;
-    description!: string;
-    contact!: string;
-    read!: boolean;
-    addedToCalendar!: boolean;
+export interface Task {
+    brf: string;
+    description: string;
+    contact: string;
+    read: boolean;
+    addedToCalendar: boolean;
 }
 // export class task {
 //     content: string = "";

@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { task } from 'src/app/models/task';
+import { Task } from 'src/app/models/task';
 
 @Component({
   selector: 'app-new-tasks',
@@ -11,7 +11,7 @@ export class NewTasksComponent implements OnInit {
   tagSource = "/assets/water-tag2.png"
   calendarIcon = "calendar_today"
 
-  tasks!: task[]
+  tasks!: Task[]
 
   inputBrf: string = ""
   inputDescription: string = ""
