@@ -4,14 +4,17 @@
     <p class="subtitle">{{ subtitle }}</p>
   </div>
   <div class="container__welcome-img">
-    <button class="report-issue-btn">
+    <button class="report-issue-btn" (click)="toggleForm()">
       <span class="material-symbols-outlined"> add </span>
     </button>
   </div>
 </div>
 
 <!-- Issue Reporting Form -->
-<form class="container__form" (submit)="reportIssue()">
+<form
+  class="container__form {{ formVisible ? '' : 'hide-form' }}"
+  (submit)="reportIssue()"
+>
   <div>
     <h3 class="title">{{ prompt }}</h3>
   </div>

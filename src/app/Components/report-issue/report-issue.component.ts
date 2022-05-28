@@ -13,6 +13,7 @@ export class ReportIssueComponent implements OnInit {
   subtitle = "Create a ticket for an issue"
   prompt = "Fill in the details below"
   report = "Report Issue"
+  formVisible = false
 
   inputBrf: string = ""
   inputDescription: string = ""
@@ -21,6 +22,10 @@ export class ReportIssueComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  toggleForm() {
+    this.formVisible = !this.formVisible
   }
 
   markTaskAsRead(id: number) {
