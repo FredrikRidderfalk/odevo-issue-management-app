@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/app/models/task';
 import { taskStore } from '../../task-store';
 
 @Component({
