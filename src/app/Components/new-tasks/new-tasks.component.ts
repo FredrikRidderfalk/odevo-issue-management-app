@@ -9,17 +9,15 @@ import { taskStore } from '../../task-store';
 })
 export class NewTasksComponent implements OnInit {
   store = taskStore;
-  date = "2022-07-11"
   tagSource = "/assets/water-tag2.png"
-  calendarIcon = "calendar_today"
+  currentDate = new Date()
 
-  tasks!: Task[]
+  // tasks!: Task[]
 
   inputBrf: string = ""
   inputDescription: string = ""
   inputContact: string = ""
 
-  currentDate = new Date()
 
   constructor() { }
 

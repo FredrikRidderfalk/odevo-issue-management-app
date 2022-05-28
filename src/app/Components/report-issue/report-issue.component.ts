@@ -13,11 +13,6 @@ export class ReportIssueComponent implements OnInit {
   subtitle = "Create a ticket for an issue"
   prompt = "Fill in the details below"
   report = "Report Issue"
-  tagSource = "/assets/water-tag2.png"
-  calendarIcon = "calendar_today"
-  currentDate = new Date()
-
-  tasks!: Task[]
 
   inputBrf: string = ""
   inputDescription: string = ""
@@ -26,22 +21,6 @@ export class ReportIssueComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.tasks = [
-      {
-        brf: "Brf Olskroken",
-        description: "Something about a leak.",
-        contact: "Alex Skarsgård",
-        read: false,
-        addedToCalendar: false,
-      },
-      {
-        brf: "Brf Guldheden",
-        description: "A light has gone out.",
-        contact: "Anna Annedal",
-        read: true,
-        addedToCalendar: true,
-      },
-    ]
   }
 
   markTaskAsRead(id: number) {
