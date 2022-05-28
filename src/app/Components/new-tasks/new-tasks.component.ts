@@ -24,26 +24,10 @@ export class NewTasksComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.tasks = [
-      {
-        brf: "Brf Olskroken",
-        description: "Something about a leak.",
-        contact: "Alex Skarsgård",
-        read: false,
-        addedToCalendar: false,
-      },
-      {
-        brf: "Brf Guldheden",
-        description: "A light has gone out.",
-        contact: "Anna Annedal",
-        read: true,
-        addedToCalendar: true,
-      },
-    ]
   }
 
   markTaskAsRead(id: number) {
-    this.tasks.map((value, i) => {
+    this.store.tasks.map((value, i) => {
       if(i === id) value.read = true
 
       return value
@@ -51,7 +35,7 @@ export class NewTasksComponent implements OnInit {
   }
 
   addToCalendar(id: number) {
-    this.tasks.map((value, i) => {
+    this.store.tasks.map((value, i) => {
       if(i === id) value.addedToCalendar = true
 
       return value
@@ -59,23 +43,7 @@ export class NewTasksComponent implements OnInit {
   }
 
   markTaskAsResolved(id: number) {
-    this.tasks = this.tasks.filter((value, i) => i !== id)
-  }
-
-  reportIssue() {
-    // Add issue to tasks array
-    this.tasks.push({
-      brf: this.inputBrf,
-      description: this.inputDescription,
-      contact: this.inputContact,
-      read: false,
-      addedToCalendar: false
-    })
-
-    // Clear input fields on submit
-    this.inputBrf = ""
-    this.inputDescription = ""
-    this.inputContact = ""
+    this.store.tasks = this.store.tasks.filter((value, i) => i !== id)
   }
 
 }

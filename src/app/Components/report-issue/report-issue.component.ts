@@ -45,7 +45,7 @@ export class ReportIssueComponent implements OnInit {
   }
 
   markTaskAsRead(id: number) {
-    this.tasks.map((value, i) => {
+    this.store.tasks.map((value, i) => {
       if(i === id) value.read = true
 
       return value
@@ -53,7 +53,7 @@ export class ReportIssueComponent implements OnInit {
   }
 
   addToCalendar(id: number) {
-    this.tasks.map((value, i) => {
+    this.store.tasks.map((value, i) => {
       if(i === id) value.addedToCalendar = true
 
       return value
@@ -61,19 +61,10 @@ export class ReportIssueComponent implements OnInit {
   }
 
   markTaskAsResolved(id: number) {
-    this.tasks = this.tasks.filter((value, i) => i !== id)
+    this.store.tasks = this.store.tasks.filter((value, i) => i !== id)
   }
 
   reportIssue() {
-    // Add issue to tasks array
-    // this.tasks.push({
-    //   brf: this.inputBrf,
-    //   description: this.inputDescription,
-    //   contact: this.inputContact,
-    //   read: false,
-    //   addedToCalendar: false
-    // })
-
     // Add issue to the store tasks array
     this.store.setTask({
       brf: this.inputBrf,
