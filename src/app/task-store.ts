@@ -20,7 +20,7 @@ class TaskStore {
     ];
 
     @action setTask(task: Task) {
-        this.tasks.push(task);
+        this.tasks.unshift(task);
     }
 }
 export const taskStore = new TaskStore();

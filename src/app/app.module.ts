@@ -2,8 +2,6 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 import { MobxAngularModule } from 'mobx-angular';
-import { StoreModule } from '@ngrx/store';
-import { reducer } from './reducers/task.reducer';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,10 +40,7 @@ import { ErrorComponent } from './pages/error/error.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MobxAngularModule,
-    StoreModule.forRoot({
-      task: reducer
-    })
+    MobxAngularModule
   ],
   providers: [],
   bootstrap: [AppComponent]
