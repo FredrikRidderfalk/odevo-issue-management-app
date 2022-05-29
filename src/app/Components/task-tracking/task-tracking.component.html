@@ -1,19 +1,19 @@
 <div class="container__task-tracker">
   <a routerLink="/tasks/new-tasks">
     <div class="task-type new-tasks">
-      <h1>{{ store.tasks.length }}</h1>
+      <h1>{{ store.newTasks }}</h1>
       <p>New Tasks</p>
     </div>
   </a>
   <a routerLink="/tasks/active-tasks">
     <div class="task-type active-tasks">
-      <h1>{{ activeTasks }}</h1>
+      <h1>{{ store.activeTasks }}</h1>
       <p>Active Tasks</p>
     </div>
   </a>
   <a (click)="showResolvedTasks()">
     <div class="task-type resolved-tasks">
-      <h1>{{ resolvedTasks }}</h1>
+      <h1>{{ store.resolvedTasks }}</h1>
       <p>Resolved Tasks</p>
     </div>
   </a>

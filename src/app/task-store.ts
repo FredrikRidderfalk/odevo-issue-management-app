@@ -1,4 +1,4 @@
-import { observable, action } from 'mobx-angular';
+import { observable, action, computed } from 'mobx-angular';
 import { Task } from "./models/task";
 
 class TaskStore {
@@ -21,8 +21,28 @@ class TaskStore {
       },
     ];
 
+    @computed get newTasks() {
+        return this.tasks.filter((value, i) => !value.resolved).length
+    }
+
+    @computed get activeTasks() {
+        return this.tasks.filter((value, i) => value.read && !value.resolved).length
+    }
+
+    @computed get resolvedTasks() {
+        return this.tasks.filter((value, i) => value.resolved).length
+    }
+
     @action setTask(task: Task) {
         this.tasks.unshift(task);
+    }
+
+    @action setActiveTask(i: number) {
+        this.tasks[i].read = true
+    }
+
+    @action setResolvedTask(i: number) {
+        this.tasks[i].resolved = true
     }
 }
 export const taskStore = new TaskStore();

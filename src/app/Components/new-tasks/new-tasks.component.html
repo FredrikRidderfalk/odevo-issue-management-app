@@ -4,13 +4,13 @@
       task.addedToCalendar ? 'added-to-calendar' : ''
     }} {{ task.read ? 'read' : '' }}"
     *ngIf="!task.resolved"
-    (click)="markTaskAsRead(i)"
+    (click)="store.setActiveTask(i)"
   >
     <div class="new-task__text">
       <div class="new-task__info">
         <div class="task-head">
           <h3 class="brf">{{ task.brf | titlecase }}</h3>
-          <button class="resolve-btn" (click)="markTaskAsResolved(i)">
+          <button class="resolve-btn" (click)="store.setResolvedTask(i)">
             Mark as resolved
           </button>
         </div>
