@@ -1,4 +1,51 @@
-<div class="container__stats">
-  <img class="logo" src="/assets/odevo-logo.png" alt="Odevo logo" />
-  <h3>{{ message }}</h3>
-</div>
+<ng-container *ngFor="let task of store.tasks; let i = index">
+  <div
+    class="container__new-task task {{
+      task.addedToCalendar ? 'added-to-calendar' : ''
+    }} {{ task.read ? 'read' : '' }}"
+    *ngIf="task.resolved"
+    (click)="store.setActiveTask(i)"
+  >
+    <div class="new-task__text">
+      <div class="new-task__info">
+        <div class="task-head">
+          <h3 class="brf">{{ task.brf | titlecase }}</h3>
+          <!-- <button class="resolve-btn" (click)="store.setResolvedTask(i)">
+            Mark as resolved
+          </button> -->
+        </div>
+        <p class="description">
+          {{ task.description }}
+        </p>
+      </div>
+      <div class="extra-info">
+        <div class="contact">
+          <p>
+            {{ task.contact | titlecase }}
+          </p>
+        </div>
+        <div class="date-added">
+          <p>{{ currentDate | date: "fullDate" }}</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="new-task__icons">
+      <div class="calendar">
+        <span id="calendar-icon" class="material-symbols-outlined">{{
+          task.addedToCalendar ? "event_available" : "calendar_today"
+        }}</span>
+      </div>
+      <div class="task-type">
+        <img class="task-type__img" src="{{ tagSource }}" alt="Tag" />
+      </div>
+    </div>
+  </div>
+</ng-container>
+
+<ng-container *ngIf="!store.resolvedTasks">
+  <div class="container__stats">
+    <img class="logo" src="/assets/odevo-logo.png" alt="Odevo logo" />
+    <h3>{{ message }}</h3>
+  </div>
+</ng-container>
