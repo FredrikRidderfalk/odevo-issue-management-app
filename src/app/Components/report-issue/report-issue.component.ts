@@ -13,6 +13,7 @@ export class ReportIssueComponent implements OnInit {
   prompt = "Fill in the details below"
   report = "Report Issue"
   formVisible = false
+  isTooltipRead!: boolean
 
   inputBrf: string = ""
   inputDescription: string = ""
@@ -21,6 +22,10 @@ export class ReportIssueComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    // Get localStorage
+    let data: any = localStorage.getItem("isTooltipRead")
+    console.log(data)
+    this.isTooltipRead = JSON.parse(data)
   }
 
   toggleForm() {
@@ -66,6 +71,12 @@ export class ReportIssueComponent implements OnInit {
     this.inputBrf = ""
     this.inputDescription = ""
     this.inputContact = ""
+    
+  }
+
+  openTooltip() {
+    // Set localStorage
+    localStorage.setItem('isTooltipRead', JSON.stringify(this.isTooltipRead = true))
   }
 
 }

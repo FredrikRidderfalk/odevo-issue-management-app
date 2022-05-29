@@ -4,9 +4,16 @@
     <p class="subtitle">{{ subtitle }}</p>
   </div>
   <div class="container__welcome-img">
-    <button class="report-issue-btn" (click)="toggleForm()">
+    <button class="report-issue-btn" (click)="toggleForm(); openTooltip()">
       <span class="material-symbols-outlined"> add </span>
     </button>
+  </div>
+  <div class="tooltip">
+    <p>
+      Tip:
+      {{ isTooltipRead ? "no tooltip shown" : "i am a tooltip" }}
+    </p>
+    <button class="tooltip-btn">Got it!</button>
   </div>
 </div>
 
@@ -43,8 +50,6 @@
     <input type="submit" value="{{ report }}" class="submit-btn" />
   </div>
 </form>
-
-<!-- <div>localStorage: {{ store.getTasksFromLocalStorage }}</div> -->
 
 <!-- Added tasks -->
 <!-- <div
