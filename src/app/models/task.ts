@@ -4,12 +4,5 @@ export interface Task {
     contact: string;
     read: boolean;
     addedToCalendar: boolean;
+    resolved: boolean;
 }
-// export class task {
-//     content: string = "";
-//     completed: boolean = false;
-// }
-// export class task {
-//     content: string | undefined
-//     completed: boolean | undefined
-// }

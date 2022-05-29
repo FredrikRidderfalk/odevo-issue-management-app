@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Task } from 'src/app/models/task';
 import { taskStore } from '../../task-store';
 
 @Component({
@@ -45,7 +44,11 @@ export class ReportIssueComponent implements OnInit {
   }
 
   markTaskAsResolved(id: number) {
-    this.store.tasks = this.store.tasks.filter((value, i) => i !== id)
+    this.store.tasks.map((value, i) => {
+      if(i === id) value.resolved = true
+
+      return value
+    })
   }
 
   reportIssue() {
@@ -55,7 +58,8 @@ export class ReportIssueComponent implements OnInit {
       description: this.inputDescription,
       contact: this.inputContact,
       read: false,
-      addedToCalendar: false
+      addedToCalendar: false,
+      resolved: false
     })
 
     // Clear input fields on submit

@@ -9,6 +9,7 @@ class TaskStore {
         contact: "Alex Skarsgård",
         read: false,
         addedToCalendar: false,
+        resolved: false,
       },
       {
         brf: "Brf Guldheden",
@@ -16,6 +17,7 @@ class TaskStore {
         contact: "Anna Annedal",
         read: true,
         addedToCalendar: true,
+        resolved: false,
       },
     ];
 

@@ -9,9 +9,9 @@ import { taskStore } from '../../task-store';
 })
 export class TaskTrackingComponent implements OnInit {
   store = taskStore;
-  newTasks = "3"
-  activeTasks = "0"
-  resolvedTasks = "5"
+  newTasks = 0
+  activeTasks = 0
+  resolvedTasks = this.store.tasks.filter((value, i) => !value.resolved).length
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 

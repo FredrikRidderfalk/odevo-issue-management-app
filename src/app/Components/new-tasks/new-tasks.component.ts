@@ -11,8 +11,6 @@ export class NewTasksComponent implements OnInit {
   tagSource = "/assets/water-tag2.png"
   currentDate = new Date()
 
-  // tasks!: Task[]
-
   inputBrf: string = ""
   inputDescription: string = ""
   inputContact: string = ""
@@ -40,7 +38,14 @@ export class NewTasksComponent implements OnInit {
   }
 
   markTaskAsResolved(id: number) {
-    this.store.tasks = this.store.tasks.filter((value, i) => i !== id)
+    // this.store.tasks = this.store.tasks.filter((value, i) => i !== id)
+    this.store.tasks.map((value, i) => {
+      console.log('value', value)
+      if(i === id) value.resolved = true
+      console.log('value2', value)
+
+      return value
+    })
   }
 
 }
