@@ -38,11 +38,8 @@ export class NewTasksComponent implements OnInit {
   }
 
   markTaskAsResolved(id: number) {
-    // this.store.tasks = this.store.tasks.filter((value, i) => i !== id)
     this.store.tasks.map((value, i) => {
-      console.log('value', value)
       if(i === id) value.resolved = true
-      console.log('value2', value)
 
       return value
     })
