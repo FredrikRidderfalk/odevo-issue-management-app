@@ -18,16 +18,16 @@ export class TaskTrackingComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  showNewTasks() {
-    this.router.navigate(["new-tasks"], {relativeTo: this.route})
-  }
+  // showNewTasks() {
+  //   this.router.navigate(["new-tasks"], {relativeTo: this.route})
+  // }
 
-  showActiveTasks() {
-    this.router.navigate(["active-tasks"], {relativeTo: this.route})
-  }
+  // showActiveTasks() {
+  //   this.router.navigate(["active-tasks"], {relativeTo: this.route})
+  // }
 
   showResolvedTasks() {
-    this.router.navigate(["resolved-tasks"], {relativeTo: this.route})
+    this.router.navigate(["tasks/resolved-tasks"])
   }
 
 }
