@@ -24,7 +24,6 @@ export class ReportIssueComponent implements OnInit {
   ngOnInit(): void {
     // Get localStorage
     let data: any = localStorage.getItem("isTooltipRead")
-    console.log(data)
     this.isTooltipRead = JSON.parse(data)
   }
 

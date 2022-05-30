@@ -22,4 +22,8 @@ describe('WelcomeMessageComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should render first name', () => {
+    expect(component.firstName).toBe('Fredrik');
+  });
 });

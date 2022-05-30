@@ -1,6 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TaskTrackingComponent } from './task-tracking.component';
+import { RouterTestingModule } from "@angular/router/testing";
 
 describe('TaskTrackingComponent', () => {
   let component: TaskTrackingComponent;
@@ -8,6 +9,7 @@ describe('TaskTrackingComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      imports: [ RouterTestingModule ],
       declarations: [ TaskTrackingComponent ]
     })
     .compileComponents();

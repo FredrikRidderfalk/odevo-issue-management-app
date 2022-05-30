@@ -1,4 +1,4 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, fakeAsync, TestBed, tick } from '@angular/core/testing';
 
 import { ReportIssueComponent } from './report-issue.component';
 
@@ -22,4 +22,22 @@ describe('ReportIssueComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should show the form on click', () => {
+    expect(component.formVisible).toBeFalse();
+    spyOn(component, 'toggleForm').and.callThrough();
+    let btn = fixture.debugElement.nativeElement.querySelector('.report-issue-btn');
+    btn.click()
+    fixture.detectChanges();
+    expect(component.toggleForm).toHaveBeenCalled();
+    expect(component.formVisible).toBeTrue();
+  });
+
+  it("should render correct text", () => {
+    expect(component.title).toBe("Issue Reporting")
+    expect(component.subtitle).toBe("Create a ticket for an issue")
+    expect(component.prompt).toBe("Fill in the details below")
+    expect(component.report).toBe("Report Issue")
+  })
+  
 });
