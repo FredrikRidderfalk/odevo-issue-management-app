@@ -4,16 +4,16 @@
     <p class="subtitle">{{ subtitle }}</p>
   </div>
   <div class="container__welcome-img">
-    <button class="report-issue-btn" (click)="toggleForm(); openTooltip()">
+    <button class="report-issue-btn" (click)="toggleForm()">
       <span class="material-symbols-outlined"> add </span>
     </button>
   </div>
-  <div class="tooltip">
+  <div class="tooltip" *ngIf="!isTooltipRead">
     <p>
-      Tip:
-      {{ isTooltipRead ? "no tooltip shown" : "i am a tooltip" }}
+      Want to report an issue? Press the button above and fill out the form!
     </p>
-    <button class="tooltip-btn">Got it!</button>
+    <button class="tooltip-btn" (click)="openTooltip()">Got it!</button>
+    <img src="/assets/lightbulb.png" alt="Lightbulb" />
   </div>
 </div>
 
