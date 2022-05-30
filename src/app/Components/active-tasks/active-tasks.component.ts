@@ -17,4 +17,11 @@ export class ActiveTasksComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  addToCalendar(id: number) {
+    this.store.tasks.map((value, i) => {
+      if(i === id) value.addedToCalendar = true
+
+      return value
+    })
+  }
 }

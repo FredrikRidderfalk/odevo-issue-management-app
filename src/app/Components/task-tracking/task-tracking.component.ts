@@ -9,22 +9,11 @@ import { taskStore } from '../../task-store';
 })
 export class TaskTrackingComponent implements OnInit {
   store = taskStore;
-  newTasks = 0
-  activeTasks = 0
-  resolvedTasks = this.store.tasks.filter((value, i) => !value.resolved).length
 
   constructor(private route: ActivatedRoute, private router: Router) { }
 
   ngOnInit(): void {
   }
-
-  // showNewTasks() {
-  //   this.router.navigate(["new-tasks"], {relativeTo: this.route})
-  // }
-
-  // showActiveTasks() {
-  //   this.router.navigate(["active-tasks"], {relativeTo: this.route})
-  // }
 
   showResolvedTasks() {
     this.router.navigate(["tasks/resolved-tasks"])

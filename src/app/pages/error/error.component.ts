@@ -84,7 +84,7 @@ export class ErrorComponent implements OnInit {
             this.y -= 10;
           }
         }
-        // MOVEMENT
+        // --- MOVEMENT ---
         this.x += this.directionX / 2;
         this.y += this.directionY / 2;
     

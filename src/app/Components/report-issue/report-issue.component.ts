@@ -31,29 +31,29 @@ export class ReportIssueComponent implements OnInit {
     this.formVisible = !this.formVisible
   }
 
-  markTaskAsRead(id: number) {
-    this.store.tasks.map((value, i) => {
-      if(i === id) value.read = true
+  // markTaskAsRead(id: number) {
+  //   this.store.tasks.map((value, i) => {
+  //     if(i === id) value.read = true
 
-      return value
-    })
-  }
+  //     return value
+  //   })
+  // }
 
-  addToCalendar(id: number) {
-    this.store.tasks.map((value, i) => {
-      if(i === id) value.addedToCalendar = true
+  // addToCalendar(id: number) {
+  //   this.store.tasks.map((value, i) => {
+  //     if(i === id) value.addedToCalendar = true
 
-      return value
-    })
-  }
+  //     return value
+  //   })
+  // }
 
-  markTaskAsResolved(id: number) {
-    this.store.tasks.map((value, i) => {
-      if(i === id) value.resolved = true
+  // markTaskAsResolved(id: number) {
+  //   this.store.tasks.map((value, i) => {
+  //     if(i === id) value.resolved = true
 
-      return value
-    })
-  }
+  //     return value
+  //   })
+  // }
 
   reportIssue() {
     // Add issue to the store tasks array

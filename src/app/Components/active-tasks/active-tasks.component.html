@@ -32,9 +32,14 @@
 
     <div class="new-task__icons">
       <div class="calendar">
-        <span id="calendar-icon" class="material-symbols-outlined">{{
-          task.addedToCalendar ? "event_available" : "calendar_today"
-        }}</span>
+        <span
+          id="calendar-icon"
+          class="material-symbols-outlined"
+          (click)="addToCalendar(i)"
+          >{{
+            task.addedToCalendar ? "event_available" : "calendar_today"
+          }}</span
+        >
       </div>
       <div class="task-type">
         <img class="task-type__img" src="{{ tagSource }}" alt="Tag" />
