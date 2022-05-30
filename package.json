@@ -19,6 +19,8 @@
     "@angular/platform-browser-dynamic": "~13.3.0",
     "@angular/router": "~13.3.0",
     "@ngrx/store": "^13.2.0",
+    "@types/gsap": "^3.0.0",
+    "gsap": "^3.10.4",
     "mobx": "^6.6.0",
     "mobx-angular": "^4.5.1",
     "rxjs": "~7.5.0",

@@ -28,7 +28,7 @@ export class ErrorComponent implements OnInit {
       // we need this object to make our mouse cursor coordinates available all over our application, since event.x and event.y will only be available inside an eventListener.
       x: undefined,
       y: undefined,
-      radius: (canvas.height / 80) * (canvas.width / 80), // Radius for interaction zone surrounding the mouse cursor
+      radius: (canvas.height / 90) * (canvas.width / 90), // Radius for interaction zone surrounding the mouse cursor
     };
     
     window.addEventListener("mousemove", function (event) {
