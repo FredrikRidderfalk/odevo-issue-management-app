@@ -11,7 +11,8 @@ export class ErrorComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit(): void {// ----- MOLECULAR ZERO-G -----
+  ngOnInit(): void {
+    // ----- MOLECULAR ZERO-G -----
     // Here we replicate the particle.js effect
     
     // ------ SETUP ------
@@ -51,7 +52,7 @@ export class ErrorComponent implements OnInit {
       draw() {
         ctx.beginPath();
         ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2, false);
-        ctx.fillStyle = `rgba(245, 155, 235, ${this.opacity})`;
+        ctx.fillStyle = `rgba(45, 45, 45, ${this.opacity})`;
         ctx.fill();
       }
       // Method to check mouse position, particle position, to move the particle, and call draw()
